@@ -381,7 +381,6 @@ body.dark-theme {
 
 .products__img{
   margin-bottom: 1rem;
-  
 }
 .products__title{
   font-size: var(--h3-font-size);
@@ -550,7 +549,9 @@ transform: translateY(-.25rem);
 }
 
 /*=============== BREAKPOINTS ===============*/
+
 /* For small devices */
+
 @media screen and (max-width: 340px) {
   .container{
     margin-left: 1rem;
@@ -571,7 +572,7 @@ transform: translateY(-.25rem);
     font-size: var(--small-font-size);
   }
   .home__images{
-    width: 248%;
+    width: 248px;
   }
   .home__images img:nth-child(1){
     width: 180px;
@@ -617,6 +618,8 @@ transform: translateY(-.25rem);
 
 
 /* For medium devices */
+
+
 @media screen and (min-width: 576px){
   .nav__menu{
     width: 342px;
@@ -626,7 +629,7 @@ transform: translateY(-.25rem);
   }
 }
 
-@media screen and(min-width: 768px) {
+@media screen and (min-width: 768px) {
   
   .home__container,.new__container{
     grid-template-columns: repeat(2, max-content);
@@ -646,12 +649,12 @@ transform: translateY(-.25rem);
 }
 
 /* For large devices */
-@media screen and (min-width: 1023px){
+@media screen and (min-width: 1024px){
   .section{
     padding: 7rem 0 1rem;
   }
   .section__title{
-    margin-bottom:4rem;
+    margin-bottom: 4rem;
   }
 
   .nav{
@@ -671,6 +674,9 @@ transform: translateY(-.25rem);
     font-weight: var(--font-medium);
     transition: .3s;
   }
+  .nav__link i{
+    display: none;
+  }
 
   .nav__link:hover{
     color: var(--title-color);
@@ -681,7 +687,7 @@ transform: translateY(-.25rem);
     color: var(--title-color);
   }
 
-  .change-theme{
+  .ri-moon-line{
     margin-left: 3rem;
     color: var(--text-color);
   }
