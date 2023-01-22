@@ -7,6 +7,8 @@ const scrollHeader = () => {
 }
 window.addEventListener( 'scroll' , scrollHeader)
 
+
+
 /*=============== SWIPER PRODUCTS ===============*/
 let swiperProducts = new Swiper(".products__container" , {
     spaceBetween: 32,
@@ -21,12 +23,31 @@ let swiperProducts = new Swiper(".products__container" , {
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+        },
         1024: {
-            spaceBetween: 72,
+            slidesPerView: 3,
+            spaceBetween: 62,
         },
  
     },
 });
+
+
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
  const sections = document.querySelectorAll( 'section[id]' )
@@ -48,6 +69,8 @@ let swiperProducts = new Swiper(".products__container" , {
     })
  }
     window.addEventListener( 'scroll' , scrollActive)
+
+
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up');
@@ -56,6 +79,7 @@ const scrollUp = () => {
     : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
 
 /*=============== DARK LIGHT THEME ===============*/ 
 const themeButton = document.getElementById('theme-button')
@@ -91,11 +115,19 @@ const sr = ScrollReveal({
     // reset: true,
 })
 
-sr.reveal('.home__data','.products__container','.footer__container','.footer__info')
+sr.reveal('.home__data')
 
 sr.reveal('.home__images', {delay: 600,origin: 'bottom'})
 
-sr.reveal('.new__card', '.brand__image', {interval: 100})
+sr.reveal('.new__card' , {delay: 400})
+
+sr.reveal('.products__container')
+
+sr.reveal('.brand__container')
+
+sr.reveal('.footer__info')
+
+sr.reveal('.footer__container')
 
 sr.reveal('.collection__explore:nth-child(1)', {origin: 'right'})
 
