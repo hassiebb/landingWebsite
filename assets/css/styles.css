@@ -1,12 +1,7 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
   --bg-color: hsl(220, 18%, 78%);
   --bg-color-light: hsl(220, 18%, 86%);
   --title-color: hsl(220, 8%, 10%);
@@ -14,11 +9,7 @@
   --text-color-light: hsl(220, 4%, 55%);
   --body-color: hsl(220, 18%, 99%);
   --container-color: hsl(220, 18%, 97%);
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Lora', serif;
-
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -27,12 +18,10 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
 
-  /*========== Font weight ==========*/
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
@@ -49,7 +38,6 @@
   }
 }
 
-/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -86,8 +74,6 @@ img {
   height: auto;
 }
 
-/*=============== THEME ===============*/
-/*========== Variables Dark theme ==========*/
 body.dark-theme {
   --bg-color: hsl(220, 18%, 13%);
   --bg-color-light: hsl(220, 18%, 23%);
@@ -98,17 +84,12 @@ body.dark-theme {
   transition: .4s; /*For animation dark mode*/
 }
 
-/*========== Button Dark/Light ==========*/
 .change-theme{
   font-size: 1.125rem;
   color: var(--title-color);
   cursor: pointer;
 }
 
-/*========== 
-    Color changes in some parts of 
-    the website, in dark theme 
-==========*/
 .dark-theme .scroll-header{
   box-shadow: 0 2px 8px hsla(220, 18%, 8%, .3);
 }
@@ -136,7 +117,6 @@ body.dark-theme {
   color: aliceblue;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
   margin-right: 1.5rem;
@@ -162,7 +142,6 @@ body.dark-theme {
   overflow: hidden; /* For animation ScrollReveal */
 }
 
-/*=============== HEADER & NAV ===============*/
 .header{
   position: fixed;
   top: 0;
@@ -218,18 +197,16 @@ body.dark-theme {
   }
 }
 
-/* Change background header */
 
 .scroll-header{
   background-color: var(--body-color);
   box-shadow: 0 1px 4px hsla(220, 4%, 15%, .1);
 }
-/* Active link */
+
 .active-link{
   color: var(--title-color);
 }
 
-/*=============== HOME ===============*/
 .home{
     background-color: var(--bg-color);
     overflow: hidden; /* For animation ScrollReveal */
@@ -272,7 +249,6 @@ body.dark-theme {
   margin-left: .5rem;
 }
 
-/*=============== BUTTON ===============*/
 .button__link{
   display: inline-flex;
   align-items: center;
@@ -289,7 +265,7 @@ body.dark-theme {
 .button__link:hover i{
   transform: translateX(.25rem);
 }
-/*=============== NEW ===============*/
+
 .new__container{
   padding-bottom: 1.5rem;
   row-gap: 2.5rem;
@@ -332,11 +308,10 @@ body.dark-theme {
   transform: translateX(.25rem);
 }
 
-/*=============== COLLECTION ===============*/
 .collection{
   background-color: var(--bg-color-light);
-  overflow: hidden; /* For animation ScrollReveal */
-  transition: .4s; /*For animation dark mode*/
+  overflow: hidden; 
+  transition: .4s; 
 }
 .collection__container{
     position: relative;
@@ -374,7 +349,8 @@ body.dark-theme {
   align-self: flex-end;
   margin-bottom: 2.5rem;
 }
-/*=============== PRODUCTS ===============*/
+
+
 .products__container{
   padding-bottom: 5rem ;
 }
@@ -396,7 +372,6 @@ body.dark-theme {
 }
 
 
-/* Swiper class */
 .swiper-button-prev::after, 
 .swiper-button-next::after{
     content: '';
@@ -419,7 +394,6 @@ body.dark-theme {
   left: calc(50% - 2rem);
 }
 
-/*=============== BRANDS ===============*/
 .brand__container{
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
@@ -434,7 +408,6 @@ body.dark-theme {
   margin-top: 2rem;
 }
 
-/*=============== FOOTER ===============*/
 .footer__container{
   row-gap: 3rem;
 }
@@ -512,7 +485,9 @@ body.dark-theme {
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
 }
-/*=============== SCROLL BAR ===============*/
+
+
+
 ::-webkit-scrollbar{
   width: .6px;
   border-radius: .5rem;
@@ -527,7 +502,7 @@ body.dark-theme {
   background-color: hsl(220, 8%, 54%);
 }
 
-/*=============== SCROLL UP ===============*/
+
 .scrollup{
   position: fixed;
   right: 1rem;
@@ -547,14 +522,11 @@ body.dark-theme {
 .scrollup:hover{
 transform: translateY(-.25rem);
 }
-/* Show Scroll Up*/
+
 .show-scroll{
   bottom: 7.5rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
-
-/* For small devices */
 
 @media screen and (max-width: 510px) {
   .container{
@@ -621,8 +593,6 @@ transform: translateY(-.25rem);
   
 
 
-/* For medium devices */
-
 
 @media screen and (min-width: 576px){
   .nav__menu{
@@ -652,7 +622,9 @@ transform: translateY(-.25rem);
   }
 }
 
-/* For large devices */
+
+
+
 @media screen and (min-width: 1024px){
   .section{
     padding: 7rem 0 1rem;
@@ -800,7 +772,7 @@ transform: translateY(-.25rem);
   }
 }
 
-/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+
 
 @media screen and (min-width: 2048px) {
   body{
@@ -809,7 +781,6 @@ transform: translateY(-.25rem);
 }
 
 
-/* For 4K resolutions (3840 x 2160, 4096 x 2160) */
 
 @media screen and (min-width: 3840px) {
   body{

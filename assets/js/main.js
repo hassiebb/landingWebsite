@@ -1,7 +1,5 @@
-/*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () => {
     const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
     this. scrollY >= 50 ?header.classList.add( 'scroll-header' )
                     : header.classList.remove( 'scroll-header')
 }
@@ -9,7 +7,6 @@ window.addEventListener( 'scroll' , scrollHeader)
 
 
 
-/*=============== SWIPER PRODUCTS ===============*/
 let swiperProducts = new Swiper(".products__container" , {
     spaceBetween: 32,
     grabCursor: true,
@@ -49,7 +46,6 @@ let swiperProducts = new Swiper(".products__container" , {
 
 
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
  const sections = document.querySelectorAll( 'section[id]' )
 
  const scrollActive = () => {
@@ -71,17 +67,14 @@ let swiperProducts = new Swiper(".products__container" , {
     window.addEventListener( 'scroll' , scrollActive)
 
 
-/*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
     this.scrollY >= 350? scrollUp.classList.add('show-scroll')
     : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
 
-/*=============== DARK LIGHT THEME ===============*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
@@ -106,7 +99,6 @@ themeButton.addEventListener('click', () => {
 
 
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({ 
     origin: 'top',
     distance: '60px',
