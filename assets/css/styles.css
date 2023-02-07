@@ -359,7 +359,7 @@ body.dark-theme {
 }
 
 .products__img{
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .products__title{
   font-size: var(--h3-font-size);
