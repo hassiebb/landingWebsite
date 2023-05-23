@@ -1,6 +1,7 @@
 # Clothing E-Commerce Website
 
 This is a clothing e-commerce website built using HTML, CSS, and JavaScript. The website features a user-friendly interface that allows users to browse and purchase clothing items online. It also includes two themes: a light theme and a dark theme, providing a personalized browsing experience.
+
 ![Screenshot 2023-05-23 170225.png](https://github.com/hassiebb/landingWebsite/blob/main/assets/img/Screenshot%202023-05-23%20170225.png)
 
 ## Features
